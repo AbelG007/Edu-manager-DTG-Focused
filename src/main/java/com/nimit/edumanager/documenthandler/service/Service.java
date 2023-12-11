@@ -1,4 +1,4 @@
-package com.nimit.edumanager.automationservice.service;
+package com.nimit.edumanager.documenthandler.service;
 
 public class Service {
 }

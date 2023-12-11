@@ -1,4 +1,4 @@
-package com.nimit.edumanager.automationservice.repository;
+package com.nimit.edumanager.documenthandler.repository;
 
 public interface Repository {
 }

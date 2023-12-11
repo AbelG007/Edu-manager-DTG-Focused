@@ -1,4 +1,4 @@
-package com.nimit.edumanager.automationservice.pojo;
+package com.nimit.edumanager.feemanager.pojo;
 
 public class Dto {
 }

@@ -1,4 +1,4 @@
-package com.nimit.edumanager.automationservice.entity;
+package com.nimit.edumanager.documenttemplategenerator.entity;
 
 public class Entity {
 }

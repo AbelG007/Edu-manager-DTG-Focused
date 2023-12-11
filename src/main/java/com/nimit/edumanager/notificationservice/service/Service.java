@@ -1,4 +1,4 @@
-package com.nimit.edumanager.automationservice.service;
+package com.nimit.edumanager.notificationservice.service;
 
 public class Service {
 }

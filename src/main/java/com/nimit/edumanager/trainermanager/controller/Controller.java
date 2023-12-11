@@ -1,4 +1,4 @@
-package com.nimit.edumanager.automationservice.controller;
+package com.nimit.edumanager.trainermanager.controller;
 
 public class Controller {
 }

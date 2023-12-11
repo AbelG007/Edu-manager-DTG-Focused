@@ -1,4 +1,4 @@
-package com.nimit.edumanager.automationservice.pojo;
+package com.nimit.edumanager.notificationservice.pojo;
 
 public class Dto {
 }

@@ -1,4 +1,4 @@
-package com.nimit.edumanager.automationservice.controller;
+package com.nimit.edumanager.notificationservice.controller;
 
 public class Controller {
 }
