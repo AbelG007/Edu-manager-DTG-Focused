@@ -19,13 +19,15 @@ public class GenerateInvoiceController {
     InvoiceGeneratorService invoiceGeneratorService;
 
     @GetMapping(value = "/students/{id}/generate-invoice", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> generateStudentPaymentInvoice(@PathVariable Long id) throws DocumentException, FileNotFoundException {
+    public ResponseEntity<String> generateStudentPaymentInvoice(@PathVariable Long id) {
         try {
             invoiceGeneratorService.generateStudentPaymentInvoicePdf(id);
             return ResponseEntity.ok("Invoice generated successfully for student with id :" + id);
-        } catch (StudentNotFoundException | DocumentException e) {
+        } catch (StudentNotFoundException e) {
             return ResponseEntity.notFound().build();
+        } catch (DocumentException | FileNotFoundException e) {
+            return ResponseEntity.unprocessableEntity().build();
         }
-
     }
+
 }
