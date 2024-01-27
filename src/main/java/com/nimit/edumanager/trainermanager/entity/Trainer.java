@@ -5,26 +5,28 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
 import java.sql.Date;
 
 @Entity
 @Getter
 @Setter
 @ToString
-@Table(name="trainer")
+@Table(name = "trainer")
 public class Trainer {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="first_name")
+    @Column(name = "first_name")
     private String firstName;
 
     @Column(name = "last_name")
     private String lastName;
 
     @Enumerated(value = EnumType.STRING)
+    @Column(name = "type")
     private TrainerType type;
 
     @Column(name = "joining_date")

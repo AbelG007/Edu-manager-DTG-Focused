@@ -9,6 +9,6 @@ CREATE TABLE IF NOT EXISTS `trainer` (
   `last_name` varchar(255) DEFAULT NULL,
   `salary` int DEFAULT NULL,
   `termination_date` date DEFAULT NULL,
-  `type` enum('permanent','freelancer') DEFAULT NULL,
+  `type` enum('PERMANENT','FREELANCER') DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
