@@ -1,6 +1,5 @@
 package com.nimit.edumanager.studentleadmanager.entity;
 
-
 import com.nimit.edumanager.studentleadmanager.enumeration.Course;
 import com.nimit.edumanager.studentleadmanager.enumeration.Source;
 import com.nimit.edumanager.studentleadmanager.enumeration.Status;
