@@ -44,4 +44,14 @@ CREATE TABLE IF NOT EXISTS `student` (
   `start_date` date DEFAULT NULL,
   `total_fee` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ;
+);
+
+CREATE TABLE IF NOT EXISTS `session` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `course` enum('JAVA','PYTHON') DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `status` enum('PLANNED','ONGOING','COMPLETED','CANCELLED','POSTPONED','ON_HOLD') DEFAULT NULL,
+  `trainer_id` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
