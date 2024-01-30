@@ -18,4 +18,5 @@ public class TrainerController {
     public ResponseEntity<Trainer> create(@RequestBody Trainer trainer) {
         return ResponseEntity.ok(trainerService.create(trainer));
     }
+
 }

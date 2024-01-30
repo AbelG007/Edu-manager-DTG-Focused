@@ -1,8 +1,8 @@
 package com.nimit.edumanager.studentleadmanager.entity;
 
-import com.nimit.edumanager.studentleadmanager.enumeration.Course;
+import com.nimit.edumanager.common.enumeration.Course;
+import com.nimit.edumanager.studentleadmanager.enumeration.LeadStatus;
 import com.nimit.edumanager.studentleadmanager.enumeration.Source;
-import com.nimit.edumanager.studentleadmanager.enumeration.Status;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -49,7 +49,7 @@ public class StudentLead {
 
     @Enumerated(value = EnumType.STRING)
     @Column(name = "status")
-    private Status status;
+    private LeadStatus status;
 
     @Column(name = "comments")
     private String comments;
