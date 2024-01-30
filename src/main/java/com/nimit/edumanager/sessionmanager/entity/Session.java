@@ -1,7 +1,8 @@
 package com.nimit.edumanager.sessionmanager.entity;
 
-import com.nimit.edumanager.sessionmanager.enumeration.Course;
-import com.nimit.edumanager.sessionmanager.enumeration.Status;
+import com.nimit.edumanager.common.enumeration.Course;
+import com.nimit.edumanager.sessionmanager.enumeration.SessionStatus;
+import com.nimit.edumanager.trainermanager.entity.Trainer;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,6 +16,7 @@ import java.sql.Date;
 @ToString
 @Table(name = "session")
 public class Session {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,6 +26,7 @@ public class Session {
     private Trainer trainer;
 
     @Enumerated(value = EnumType.STRING)
+    @Column(name = "course")
     private Course course;
 
     @Column(name = "start_date")
@@ -33,6 +36,7 @@ public class Session {
     private Date endDate;
 
     @Enumerated(value = EnumType.STRING)
-    private Status status;
+    @Column(name = "status")
+    private SessionStatus status;
 
 }
