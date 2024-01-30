@@ -16,4 +16,5 @@ public class TrainerService {
     public Trainer create(Trainer trainer) {
         return trainerRepository.save(trainer);
     }
+
 }

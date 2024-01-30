@@ -1,8 +1,7 @@
-package com.nimit.edumanager.studentleadmanager.entity;
+package com.nimit.edumanager.studentmanager.entity;
 
 import com.nimit.edumanager.common.enumeration.Course;
-import com.nimit.edumanager.studentleadmanager.enumeration.LeadStatus;
-import com.nimit.edumanager.studentleadmanager.enumeration.Source;
+import com.nimit.edumanager.studentmanager.enumeration.Gender;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,8 +13,8 @@ import java.sql.Date;
 @Getter
 @Setter
 @ToString
-@Table(name = "student_lead")
-public class StudentLead {
+@Table(name = "student")
+public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,33 +27,35 @@ public class StudentLead {
     private String lastName;
 
     @Column(name = "contact_number")
-    private String contactNumber;
+    private Integer contactNumber;
 
     @Column(name = "email")
     private String email;
 
-    @Column(name = "date_of_enquiry")
-    private Date dateOfEnquiry;
+    @Enumerated(value = EnumType.STRING)
+    @Column(name = "gender")
+    private Gender gender;
+
+    @Column(name = "date_of_birth")
+    private Date dateOfBirth;
+
+    @Column(name = "start_date")
+    private Date startDate;
+
+    @Column(name = "end_date")
+    private Date endDate;
 
     @Column(name = "qualification")
     private String qualification;
 
     @Enumerated(value = EnumType.STRING)
-    @Column(name = "source")
-    private Source source;
-
-    @Enumerated(value = EnumType.STRING)
     @Column(name = "course")
     private Course course;
 
-    @Enumerated(value = EnumType.STRING)
-    @Column(name = "status")
-    private LeadStatus status;
+    @Column(name = "total_fee")
+    private Integer totalFee;
 
-    @Column(name = "comments")
-    private String comments;
-
-    @Column(name = "next_call_date")
-    private Date nextCallDate;
+    @Column(name = "balance_fee")
+    private Integer balanceFee;
 
 }

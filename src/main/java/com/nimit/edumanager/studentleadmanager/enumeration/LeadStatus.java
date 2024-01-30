@@ -1,5 +1,5 @@
 package com.nimit.edumanager.studentleadmanager.enumeration;
 
-public enum Status {
+public enum LeadStatus {
     NEW, ONGOING, CLOSED, LOST, ENROLLED
 }
