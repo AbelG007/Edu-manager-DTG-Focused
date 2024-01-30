@@ -16,7 +16,6 @@ dist/
 # Log files
 logs/
 *.log
-logs/
 
 # Package files
 *.jar

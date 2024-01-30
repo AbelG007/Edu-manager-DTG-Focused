@@ -26,21 +26,22 @@ CREATE TABLE IF NOT EXISTS `student_lead` (
   `qualification` varchar(255) DEFAULT NULL,
   `source` enum('SOCIAL_MEDIA','GOOGLE','FRIENDS') DEFAULT NULL,
   `status` enum('NEW','ONGOING','CLOSED','LOST','ENROLLED') DEFAULT NULL,
-  PRIMARY KEY (`id`));
+  PRIMARY KEY (`id`)
+);
 
-CREATE TABLE `student` (
+CREATE TABLE IF NOT EXISTS `student` (
   `id` bigint NOT NULL AUTO_INCREMENT,
- `balanceFee` int DEFAULT NULL,
-   `contact_number` int DEFAULT NULL,
-  `course` varchar(255) DEFAULT NULL,
-  `dob` datetime(6) DEFAULT NULL,
+  `balance_fee` int DEFAULT NULL,
+  `contact_number` int DEFAULT NULL,
+  `course` enum('JAVA','PYTHON') DEFAULT NULL,
+  `date_of_birth` date DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `end_date` datetime(6) DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
   `first_name` varchar(255) DEFAULT NULL,
-  `gender` enum('Male','Female','Other') DEFAULT NULL,
+  `gender` enum('MALE','FEMALE','OTHER') DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
   `qualification` varchar(255) DEFAULT NULL,
-  `start_date` datetime(6) DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
   `total_fee` int DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ;
