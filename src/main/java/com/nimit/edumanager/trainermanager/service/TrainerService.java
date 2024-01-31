@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @Transactional
 public class TrainerService {
@@ -15,6 +17,10 @@ public class TrainerService {
 
     public Trainer create(Trainer trainer) {
         return trainerRepository.save(trainer);
+    }
+
+    public List<Trainer> fetchAllTrainers() {
+        return trainerRepository.findAll();
     }
 
 }
