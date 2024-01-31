@@ -2,9 +2,7 @@ package com.nimit.edumanager.trainermanager.entity;
 
 import com.nimit.edumanager.trainermanager.enumeration.TrainerType;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.sql.Date;
 
@@ -12,8 +10,11 @@ import java.sql.Date;
 @Getter
 @Setter
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "trainer")
-public class Trainer {
+public class Trainer
+{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
