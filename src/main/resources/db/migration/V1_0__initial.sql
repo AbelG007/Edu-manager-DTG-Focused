@@ -55,3 +55,12 @@ CREATE TABLE IF NOT EXISTS `session` (
   `trainer_id` bigint DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
+
+CREATE TABLE IF NOT EXISTS `payment` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `amount` int DEFAULT NULL,
+  `pay_date` date DEFAULT NULL,
+  `payment_mode` enum('CASH','BANK_TRANSFER','CREDIT_CARD','DEBIT_CARD') DEFAULT NULL,
+  `student_id` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
