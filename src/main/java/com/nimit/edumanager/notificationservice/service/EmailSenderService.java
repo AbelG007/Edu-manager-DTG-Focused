@@ -2,6 +2,7 @@ package com.nimit.edumanager.notificationservice.service;
 
 import com.nimit.edumanager.common.utility.Constants;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.mail.*;
 import javax.mail.internet.AddressException;
@@ -10,6 +11,7 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 @Service
+@Transactional
 public class EmailSenderService {
 
     public String sendEmail(String email) throws MessagingException, AddressException {

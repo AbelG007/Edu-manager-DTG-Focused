@@ -6,6 +6,7 @@ import com.nimit.edumanager.trainermanager.entity.Trainer;
 import com.nimit.edumanager.trainermanager.service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -14,6 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
+@Transactional
 public class GenerateTrainerPaySlipService {
 
     @Autowired
