@@ -37,17 +37,3 @@ public class Document {
     private byte[] file;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
