@@ -24,4 +24,5 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(e.getMessage());
         }
     }
+
 }

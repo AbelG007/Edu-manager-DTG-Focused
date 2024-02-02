@@ -36,7 +36,6 @@ public class Payment {
     @Column(name = "payment_mode")
     private PaymentMode paymentMode;
 
-
 }
 
 
