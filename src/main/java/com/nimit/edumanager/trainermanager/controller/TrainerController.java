@@ -19,10 +19,10 @@ public class TrainerController {
     public ResponseEntity<Trainer> create(@RequestBody Trainer trainer) {
         return ResponseEntity.ok(trainerService.create(trainer));
     }
+
     @GetMapping(value = "/trainers", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Trainer>> getAllTrainers() {
-        return ResponseEntity.ok(trainerService.getAllTrainers());
+        return ResponseEntity.ok(trainerService.fetchAllTrainers());
     }
-
 
 }

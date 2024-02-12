@@ -23,8 +23,4 @@ public class TrainerService {
         return trainerRepository.findAll();
     }
 
-    public List<Trainer> getAllTrainers() {
-        return trainerRepository.findAll();
-    }
-
 }
