@@ -27,7 +27,7 @@ public class Student {
     private String lastName;
 
     @Column(name = "contact_number")
-    private Integer contactNumber;
+    private String contactNumber;
 
     @Column(name = "email")
     private String email;

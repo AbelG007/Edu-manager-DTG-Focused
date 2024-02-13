@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `student_lead` (
 CREATE TABLE IF NOT EXISTS `student` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `balance_fee` int DEFAULT NULL,
-  `contact_number` int DEFAULT NULL,
+  `contact_number` varchar(255) DEFAULT NULL,
   `course` enum('JAVA','PYTHON') DEFAULT NULL,
   `date_of_birth` date DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
