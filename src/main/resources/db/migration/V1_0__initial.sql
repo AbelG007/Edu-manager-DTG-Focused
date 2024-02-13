@@ -53,7 +53,8 @@ CREATE TABLE IF NOT EXISTS `session` (
   `start_date` date DEFAULT NULL,
   `status` enum('PLANNED','ONGOING','COMPLETED','CANCELLED','POSTPONED','ON_HOLD') DEFAULT NULL,
   `trainer_id` bigint DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`trainer_id`) REFERENCES `trainer` (`id`)
 );
 
 CREATE TABLE IF NOT EXISTS `payment` (
@@ -62,5 +63,6 @@ CREATE TABLE IF NOT EXISTS `payment` (
   `pay_date` date DEFAULT NULL,
   `payment_mode` enum('CASH','BANK_TRANSFER','CREDIT_CARD','DEBIT_CARD') DEFAULT NULL,
   `student_id` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`student_id`) REFERENCES `student` (`id`)
 );
