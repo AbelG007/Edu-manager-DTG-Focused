@@ -1,6 +1,7 @@
 package com.nimit.edumanager.trainermanager.controller;
 
 import com.nimit.edumanager.trainermanager.entity.Trainer;
+import com.nimit.edumanager.trainermanager.exception.TrainerNotFoundException;
 import com.nimit.edumanager.trainermanager.service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -23,6 +24,15 @@ public class TrainerController {
     @GetMapping(value = "/trainers", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Trainer>> getAllTrainers() {
         return ResponseEntity.ok(trainerService.fetchAllTrainers());
+    }
+
+    @PatchMapping(value = "/trainers/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Trainer> update(@PathVariable Long id, @RequestBody Trainer trainer) {
+        try {
+            return ResponseEntity.ok(trainerService.update(id, trainer));
+        } catch (TrainerNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
 }
