@@ -31,7 +31,7 @@ public class Trainer
     private TrainerType type;
 
     @Column(name = "joining_date")
-    private Date joiningDate;qq
+    private Date joiningDate;
 
     @Column(name = "termination_date")
     private Date terminationDate;
