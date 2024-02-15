@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @Transactional
 public class StudentLeadService {
@@ -15,6 +17,10 @@ public class StudentLeadService {
 
     public StudentLead create(StudentLead studentLead) {
         return studentLeadRepository.save(studentLead);
+    }
+
+    public List<StudentLead> fetchAllStudentLeads() {
+        return studentLeadRepository.findAll();
     }
 
 }
