@@ -24,8 +24,8 @@ public class StudentLeadController {
     }
 
     @GetMapping(value = "/student-leads", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<StudentLead>> getAllStudentLead() {
-        return ResponseEntity.ok(studentLeadService.fetchAllStudentLead());
+    public ResponseEntity<List<StudentLead>> getAllStudentLeads() {
+        return ResponseEntity.ok(studentLeadService.fetchAllStudentLeads());
     }
 
 }

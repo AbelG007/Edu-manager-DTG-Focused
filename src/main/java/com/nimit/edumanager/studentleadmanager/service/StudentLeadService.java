@@ -16,11 +16,10 @@ public class StudentLeadService {
     StudentLeadRepository studentLeadRepository;
 
     public StudentLead create(StudentLead studentLead) {
-
         return studentLeadRepository.save(studentLead);
     }
 
-    public List<StudentLead> fetchAllStudentLead() {
+    public List<StudentLead> fetchAllStudentLeads() {
         return studentLeadRepository.findAll();
     }
 
