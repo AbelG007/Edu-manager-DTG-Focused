@@ -16,7 +16,7 @@ public class StudentLeadService {
     @Autowired
     StudentLeadRepository studentLeadRepository;
 
-    public StudentLead create(StudentLead studentLead) {
+    public StudentLead createStudentLead(StudentLead studentLead) {
         return studentLeadRepository.save(studentLead);
     }
 
@@ -28,7 +28,7 @@ public class StudentLeadService {
         return studentLeadRepository.findById(id).orElseThrow(() -> new StudentLeadNotFoundException("Student with id" + id + "not found"));
     }
 
-    public StudentLead update(Long id, StudentLead studentLead) throws StudentLeadNotFoundException {
+    public StudentLead updateStudentLead(Long id, StudentLead studentLead) throws StudentLeadNotFoundException {
         StudentLead studentLeadFromDb = getStudentLeadById(id);
         studentLeadFromDb.setFirstName(studentLead.getFirstName());
         studentLeadFromDb.setLastName(studentLead.getLastName());

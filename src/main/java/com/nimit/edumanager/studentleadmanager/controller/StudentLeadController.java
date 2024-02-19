@@ -17,8 +17,8 @@ public class StudentLeadController {
     StudentLeadService studentLeadService;
 
     @PostMapping(value = "/student-leads", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<StudentLead> create(@RequestBody StudentLead studentLead) {
-        return ResponseEntity.ok(studentLeadService.create(studentLead));
+    public ResponseEntity<StudentLead> createStudentLead(@RequestBody StudentLead studentLead) {
+        return ResponseEntity.ok(studentLeadService.createStudentLead(studentLead));
     }
 
     @GetMapping(value = "/student-leads", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -36,11 +36,12 @@ public class StudentLeadController {
     }
 
     @PatchMapping(value = "/student-leads/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<StudentLead> update(@PathVariable Long id, @RequestBody StudentLead studentLead) {
+    public ResponseEntity<StudentLead> updateStudentLead(@PathVariable Long id, @RequestBody StudentLead studentLead) {
         try {
-            return ResponseEntity.ok(studentLeadService.update(id, studentLead));
+            return ResponseEntity.ok(studentLeadService.updateStudentLead(id, studentLead));
         } catch (StudentLeadNotFoundException e) {
             return ResponseEntity.notFound().build();
         }
     }
+
 }
